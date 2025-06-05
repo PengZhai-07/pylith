@@ -1,0 +1,51 @@
+# Examples: 2D Strike-Slip Fault
+
+This suite of examples demonstrates some basic concepts of using
+PyLith with a single through-going strike-slip fault and a simple
+rectangular domain.
+
+## Meshing
+
+We provide mesh files generated using Gmsh and Cubit.
+We also include a Python script for generating the finite-element mesh with
+triangular cells using Gmsh and Journal files for generating the
+finite-element mesh with triangular or quadrilateral cell using Cubit.
+
+## Step 1: Static Coseismic Slip
+
+This example involves a static simulation that solves for the deformation from prescribed coseismic slip on the fault. We specify 2 meters of right-lateral slip.
+
+### compared with constant timestep, adaptive timestep for quasi-static (implicit) problem could be more efficient with a few longer timesteps intead of numerous small timesteps. In this example, we will do performance test of different petsc adaptive time-stepping method and try to find the optimal one
+
+## step01a_slip_ts.cfg 
+define a quasi-static time-dependent problem with maxwell rheology (mat_maxwell.spatialdb).
+
+Other setups are similar to that in the ../strikeslip-2d/step01a_slip.cfg
+
+##### time_convergence_test.py    output folder: perf_ts (log_view)  command_logs_ts (screen output)
+test the convergence of timestep and find the optimal timestep for the following tests (e.g. 1 years)
+save the error (F-distance) as distance_time_convergence.npy
+
+##### ts.py  output folder: perf (log_view)  command_logs (screen output)
+run all methods and compute the error of final-step solution on-the-fly (data in ./output will be overridden), save the error (F-distance) as distance_methods_31.npy
+
+Before running the ts.py, the reference solution (displacement) should be in the folder ./output_baseline readily.
+available methods: beuler_none, cn_none, beuler_basic, cn_basic, bdf_1, bdf_2, bdf_3, bdf_4, bdf_5, bdf_6
+
+##  notes
+reference model: mesh_generator.refiner.levels = 3 and problem.solution_observers.domain.refine_levels = 1
+other models: mesh_generator.refiner.levels = 2 and problem.solution_observers.domain.refine_levels = 2
+So the final solution can be compared directly between the reference model and other models
+
+###### performance comparison visualization (This is a python jupyter notebook)
+metrics: running time/number of matmult operatons/F-diatance of other methods to the reference model
+Plot the F-distance vs. number of matmult operatons of each method
+
+To run the example:
+```bash
+# Coarse resolution mesh
+pylith step01a_slip_ts.cfg
+
+python3 time_convergence_test.py 
+
+python3 ts.py 
