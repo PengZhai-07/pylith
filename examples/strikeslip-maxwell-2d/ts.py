@@ -1,5 +1,6 @@
-# Python3 script to run simulations with all methods
-# Calculate the F-distance (error) on-the-fly
+#!/usr/bin/env python3
+
+
 import csv
 import subprocess
 import os

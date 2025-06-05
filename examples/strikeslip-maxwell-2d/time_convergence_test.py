@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Timestep convergence test with the same spatial resolution (coarse mesh: refine_level=1) and different timestep length
 # plot the convergence curve: F-distance vs timestep length
 
@@ -107,7 +109,7 @@ def main():
 
         log_file = os.path.join(log_screen_dir, f"command_log_{i}.txt")
         print(command)
-            
+
         execute_and_log_command(command, log_file)
             
         filename = "output/step01a_slip_ts-domain.h5"
