@@ -1,4 +1,4 @@
-Executing: pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=beuler --petsc.ts_adapt_type=none --petsc.log_view=ascii:./perf/1.txt
+Executing: pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=none --petsc.log_view=ascii:./perf/13.txt
 Output:
  >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/apps/PyLithApp.py:77:main
  -- pylithapp(info)
@@ -74,509 +74,499 @@ ts_type = beuler
  -- timedependent(info)
  -- Solving problem.
 0 TS dt 0.05 time -0.05
+    0 SNES Function norm 0.000000000000e+00
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 0
     0 SNES Function norm 2.563249414369e-02
       Linear solve converged due to CONVERGED_ATOL iterations 46
     1 SNES Function norm 6.419225417299e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 1 TS dt 0.05 time 0.
-    0 SNES Function norm 1.312375682770e-05
+    0 SNES Function norm 1.281624713903e-01
       Linear solve converged due to CONVERGED_ATOL iterations 40
-    1 SNES Function norm 8.758761436657e-13
+    1 SNES Function norm 8.758801404263e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 2 TS dt 0.05 time 0.05
-    0 SNES Function norm 1.260527723662e-05
+    0 SNES Function norm 2.563249777464e-02
       Linear solve converged due to CONVERGED_ATOL iterations 25
-    1 SNES Function norm 9.890963533403e-13
+    1 SNES Function norm 9.890963885239e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 3 TS dt 0.05 time 0.1
-    0 SNES Function norm 1.210870665294e-05
+    0 SNES Function norm 2.234086500038e-08
       Linear solve converged due to CONVERGED_ATOL iterations 14
-    1 SNES Function norm 8.070896526336e-13
+    1 SNES Function norm 8.072666259530e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 4 TS dt 0.05 time 0.15
-    0 SNES Function norm 1.163309277302e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 15
-    1 SNES Function norm 7.406521701039e-13
+    0 SNES Function norm 2.137827642845e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 14
+    1 SNES Function norm 6.585050559144e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 5 TS dt 0.05 time 0.2
-    0 SNES Function norm 1.117752537070e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 6.353192520383e-13
+    0 SNES Function norm 2.045750865530e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 13
+    1 SNES Function norm 9.583625550386e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 6 TS dt 0.05 time 0.25
-    0 SNES Function norm 1.074113551868e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 7
-    1 SNES Function norm 8.079368576469e-13
+    0 SNES Function norm 1.957781439827e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 13
+    1 SNES Function norm 7.895968607759e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 7 TS dt 0.05 time 0.3
-    0 SNES Function norm 1.032309204411e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 8
-    1 SNES Function norm 7.214204217421e-13
+    0 SNES Function norm 1.873742528665e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 12
+    1 SNES Function norm 9.998097694465e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 8 TS dt 0.05 time 0.35
-    0 SNES Function norm 9.922601262428e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 9
-    1 SNES Function norm 5.397614851803e-13
+    0 SNES Function norm 1.793411713162e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 12
+    1 SNES Function norm 8.170892622828e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 9 TS dt 0.05 time 0.4
-    0 SNES Function norm 9.538903882418e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 9.500632616290e-13
+    0 SNES Function norm 1.716510509127e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 10
+    1 SNES Function norm 7.774134043237e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 10 TS dt 0.05 time 0.45
-    0 SNES Function norm 9.171274738862e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 6.156247671175e-13
+    0 SNES Function norm 1.643036991892e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 4
+    1 SNES Function norm 8.578592126421e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 11 TS dt 0.05 time 0.5
-    0 SNES Function norm 8.819021334539e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 8
-    1 SNES Function norm 6.824528733423e-13
+    0 SNES Function norm 1.572893622808e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 3
+    1 SNES Function norm 4.980102473896e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 12 TS dt 0.05 time 0.55
-    0 SNES Function norm 8.481481097314e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 5.393190357857e-13
+    0 SNES Function norm 1.505633729815e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 2
+    1 SNES Function norm 5.847452201395e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 13 TS dt 0.05 time 0.6
-    0 SNES Function norm 8.158020111423e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 5.333980996804e-13
+    0 SNES Function norm 1.441568019553e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 4
+    1 SNES Function norm 6.196010838611e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 14 TS dt 0.05 time 0.65
-    0 SNES Function norm 7.848034371647e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 2
-    1 SNES Function norm 7.738362579304e-13
+    0 SNES Function norm 1.380120775730e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 9
+    1 SNES Function norm 5.013230795606e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 15 TS dt 0.05 time 0.7
-    0 SNES Function norm 7.550944733138e-06
+    0 SNES Function norm 1.321462968296e-08
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 6.619254182919e-13
+    1 SNES Function norm 7.413400205935e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 16 TS dt 0.05 time 0.75
-    0 SNES Function norm 7.266198287934e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 10
-    1 SNES Function norm 7.723810304136e-13
+    0 SNES Function norm 1.265319396858e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 3
+    1 SNES Function norm 7.504227619844e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 17 TS dt 0.05 time 0.8
-    0 SNES Function norm 6.993267684585e-06
+    0 SNES Function norm 1.211677273203e-08
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 6.211944746875e-13
+    1 SNES Function norm 5.512910879497e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 18 TS dt 0.05 time 0.85
-    0 SNES Function norm 6.731646100900e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 6.557271934598e-13
+    0 SNES Function norm 1.160393865758e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 1.077473206188e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 19 TS dt 0.05 time 0.9
-    0 SNES Function norm 6.480852354631e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 5.921607827650e-13
+    0 SNES Function norm 1.111295484725e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 6.371166784555e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 20 TS dt 0.05 time 0.95
-    0 SNES Function norm 6.240423444855e-06
+    0 SNES Function norm 1.064398105303e-08
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 9.316926472436e-13
+    1 SNES Function norm 8.773166735097e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 21 TS dt 0.05 time 1.
-    0 SNES Function norm 6.009918826411e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 9.054040083942e-13
+    0 SNES Function norm 1.019509601565e-08
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 9.051181498755e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 22 TS dt 0.05 time 1.05
-    0 SNES Function norm 5.788917371714e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 5.715514935486e-13
+    0 SNES Function norm 9.765760890028e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 4
+    1 SNES Function norm 7.450570227389e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 23 TS dt 0.05 time 1.1
-    0 SNES Function norm 5.577013912667e-06
+    0 SNES Function norm 9.355991607007e-09
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 1.126768521048e-12
+    1 SNES Function norm 6.718334097599e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 24 TS dt 0.05 time 1.15
-    0 SNES Function norm 5.373823592595e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 5.794496145600e-13
+    0 SNES Function norm 8.960973735976e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 8.982169940272e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 25 TS dt 0.05 time 1.2
-    0 SNES Function norm 5.178979254428e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 9
-    1 SNES Function norm 5.679197867626e-13
+    0 SNES Function norm 8.588068505257e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 8
+    1 SNES Function norm 9.878431187862e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 26 TS dt 0.05 time 1.25
-    0 SNES Function norm 4.992126166034e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 6.135446749782e-13
+    0 SNES Function norm 8.228534740613e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 4
+    1 SNES Function norm 7.919225082380e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 27 TS dt 0.05 time 1.3
-    0 SNES Function norm 4.812928334353e-06
+    0 SNES Function norm 7.883361609674e-09
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 6.860769244989e-13
+    1 SNES Function norm 9.349254903068e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 28 TS dt 0.05 time 1.35
-    0 SNES Function norm 4.641063303367e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 8
-    1 SNES Function norm 5.947740329359e-13
+    0 SNES Function norm 7.556469886599e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 8.833189031444e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 29 TS dt 0.05 time 1.4
-    0 SNES Function norm 4.476223041225e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 7.934089335407e-13
+    0 SNES Function norm 7.239879626678e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 1.001558877752e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 30 TS dt 0.05 time 1.45
-    0 SNES Function norm 4.318112312483e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 5.154064164548e-13
+    0 SNES Function norm 6.939506286530e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 6.516757093953e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 31 TS dt 0.05 time 1.5
-    0 SNES Function norm 4.166449591207e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 4.444281833732e-13
+    0 SNES Function norm 6.652540518864e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 5.751061751516e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 32 TS dt 0.05 time 1.55
-    0 SNES Function norm 4.020964987076e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 9.489382566134e-13
+    0 SNES Function norm 6.376354128273e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 9.361266905095e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 33 TS dt 0.05 time 1.6
-    0 SNES Function norm 3.881400857829e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 7
-    1 SNES Function norm 7.106229335575e-13
+    0 SNES Function norm 6.113225744962e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 7.024626660401e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 34 TS dt 0.05 time 1.65
-    0 SNES Function norm 3.747510833459e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 4.835852099189e-13
+    0 SNES Function norm 5.859547125229e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 9.685941460812e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 35 TS dt 0.05 time 1.7
-    0 SNES Function norm 3.619058447003e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 7.374160867675e-13
+    0 SNES Function norm 5.619756824390e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 9.762275702780e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 36 TS dt 0.05 time 1.75
-    0 SNES Function norm 3.495818077420e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 5.504792185076e-13
+    0 SNES Function norm 5.388020756403e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 7.128616068644e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 37 TS dt 0.05 time 1.8
-    0 SNES Function norm 3.377574270291e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 9.204917829140e-13
+    0 SNES Function norm 5.167365000312e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 8.892027138397e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 38 TS dt 0.05 time 1.85
-    0 SNES Function norm 3.264119650606e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 6.487185115079e-13
+    0 SNES Function norm 4.956374625940e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 9.027928728502e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 39 TS dt 0.05 time 1.9
-    0 SNES Function norm 3.155257429195e-06
+    0 SNES Function norm 4.752889180488e-09
       Linear solve converged due to CONVERGED_ATOL iterations 2
-    1 SNES Function norm 6.933873878934e-13
+    1 SNES Function norm 6.935293118856e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 40 TS dt 0.05 time 1.95
-    0 SNES Function norm 3.050798011498e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 5.031416117157e-13
+    0 SNES Function norm 4.558338019268e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 10
+    1 SNES Function norm 9.685949407738e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 41 TS dt 0.05 time 2.
-    0 SNES Function norm 2.950559696362e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 1.005406250964e-12
+    0 SNES Function norm 4.373820038346e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 10
+    1 SNES Function norm 7.853809426289e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 42 TS dt 0.05 time 2.05
-    0 SNES Function norm 2.854369948056e-06
+    0 SNES Function norm 4.195961566130e-09
       Linear solve converged due to CONVERGED_ATOL iterations 2
-    1 SNES Function norm 6.884636672344e-13
+    1 SNES Function norm 1.328077292464e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 43 TS dt 0.05 time 2.1
-    0 SNES Function norm 2.762063382128e-06
+    0 SNES Function norm 4.027728040030e-09
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 1.100197871047e-12
+    1 SNES Function norm 8.302655292915e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 44 TS dt 0.05 time 2.15
-    0 SNES Function norm 2.673480104839e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 11
-    1 SNES Function norm 6.458670880234e-13
+    0 SNES Function norm 3.861816552022e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 7.167682115515e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 45 TS dt 0.05 time 2.2
-    0 SNES Function norm 2.588469340752e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 8.528878443929e-13
+    0 SNES Function norm 3.707099565972e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 1.055016356621e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 46 TS dt 0.05 time 2.25
-    0 SNES Function norm 2.506884424090e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 9.185110089597e-13
+    0 SNES Function norm 3.557258312515e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 1.188539488664e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 47 TS dt 0.05 time 2.3
-    0 SNES Function norm 2.428586578035e-06
+    0 SNES Function norm 3.414603320386e-09
       Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 4.472926249897e-13
+    1 SNES Function norm 4.946182351310e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 48 TS dt 0.05 time 2.35
-    0 SNES Function norm 2.353442266013e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 1.399312255835e-12
+    0 SNES Function norm 3.279387078908e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 7.248333051171e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 49 TS dt 0.05 time 2.4
-    0 SNES Function norm 2.281323239087e-06
+    0 SNES Function norm 3.146800210816e-09
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 5.044792063503e-13
+    1 SNES Function norm 8.785378747785e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 50 TS dt 0.05 time 2.45
-    0 SNES Function norm 2.212107956655e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 9
-    1 SNES Function norm 7.823953864376e-13
+    0 SNES Function norm 3.021602887701e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 6.913035090815e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 51 TS dt 0.05 time 2.5
-    0 SNES Function norm 2.145677935462e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 7.193084597157e-13
+    0 SNES Function norm 2.901400208520e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 5.497228507469e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 52 TS dt 0.05 time 2.55
-    0 SNES Function norm 2.081921258592e-06
+    0 SNES Function norm 2.786704089541e-09
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 4.575065071522e-13
+    1 SNES Function norm 5.657697045404e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 53 TS dt 0.05 time 2.6
-    0 SNES Function norm 2.020730487883e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 2
-    1 SNES Function norm 9.186288443985e-13
+    0 SNES Function norm 2.676229890774e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 7.555321700463e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 54 TS dt 0.05 time 2.65
-    0 SNES Function norm 1.962001785968e-06
+    0 SNES Function norm 2.570262836162e-09
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 6.369548102308e-13
+    1 SNES Function norm 9.903077501280e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 55 TS dt 0.05 time 2.7
-    0 SNES Function norm 1.905635661929e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 6.211288370354e-13
+    0 SNES Function norm 2.468191600867e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 1
+    1 SNES Function norm 1.353900438145e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 56 TS dt 0.05 time 2.75
-    0 SNES Function norm 1.851537967397e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 6.032357637015e-13
+    0 SNES Function norm 2.374374267939e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 4.725884406245e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 57 TS dt 0.05 time 2.8
-    0 SNES Function norm 1.799617093219e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 7
-    1 SNES Function norm 7.923572821755e-13
+    0 SNES Function norm 2.277849462007e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 4
+    1 SNES Function norm 7.829518047664e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 58 TS dt 0.05 time 2.85
-    0 SNES Function norm 1.749785769230e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 6.173649472307e-13
+    0 SNES Function norm 2.190021224444e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 2
+    1 SNES Function norm 6.296927827349e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 59 TS dt 0.05 time 2.9
-    0 SNES Function norm 1.701959920603e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 7
-    1 SNES Function norm 1.239907228491e-12
+    0 SNES Function norm 2.105703777457e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 6.839090386740e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 60 TS dt 0.05 time 2.95
-    0 SNES Function norm 1.656059296425e-06
+    0 SNES Function norm 2.023829535201e-09
       Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 9.025196415679e-13
+    1 SNES Function norm 7.643371212221e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 61 TS dt 0.05 time 3.
-    0 SNES Function norm 1.612006294178e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 1.164948745095e-12
+    0 SNES Function norm 1.945181242142e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 4
+    1 SNES Function norm 8.664696939778e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 62 TS dt 0.05 time 3.05
-    0 SNES Function norm 1.569726956870e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 5.894610288684e-13
+    0 SNES Function norm 1.869980600032e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 9.394305054951e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 63 TS dt 0.05 time 3.1
-    0 SNES Function norm 1.529149831093e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 5.619468620866e-13
+    0 SNES Function norm 1.798286680409e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 8.865564366772e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 64 TS dt 0.05 time 3.15
-    0 SNES Function norm 1.490206705681e-06
+    0 SNES Function norm 1.728439818289e-09
       Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 1.082988638393e-12
+    1 SNES Function norm 6.614265709647e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 65 TS dt 0.05 time 3.2
-    0 SNES Function norm 1.452831631380e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 6.291705704130e-13
+    0 SNES Function norm 1.663210906250e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 6.494586951210e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 66 TS dt 0.05 time 3.25
-    0 SNES Function norm 1.416961479708e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 8.187384522654e-13
+    0 SNES Function norm 1.599421695826e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 13
+    1 SNES Function norm 6.985523308846e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 67 TS dt 0.05 time 3.3
-    0 SNES Function norm 1.382535526839e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 7.450011060039e-13
+    0 SNES Function norm 1.538727401721e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 4
+    1 SNES Function norm 7.716569174264e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 68 TS dt 0.05 time 3.35
-    0 SNES Function norm 1.349495460968e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 1.333880106601e-12
+    0 SNES Function norm 1.480302284153e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 8.467291963539e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 69 TS dt 0.05 time 3.4
-    0 SNES Function norm 1.317785047753e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 9.185298717401e-13
+    0 SNES Function norm 1.425670202807e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 8.175336039133e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 70 TS dt 0.05 time 3.45
-    0 SNES Function norm 1.287350569923e-06
+    0 SNES Function norm 1.370320366491e-09
       Linear solve converged due to CONVERGED_ATOL iterations 7
-    1 SNES Function norm 4.571375055021e-13
+    1 SNES Function norm 6.987936287879e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 71 TS dt 0.05 time 3.5
-    0 SNES Function norm 1.258139868444e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 7
-    1 SNES Function norm 1.133198541095e-12
+    0 SNES Function norm 1.319870354736e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 4
+    1 SNES Function norm 7.443090526125e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 72 TS dt 0.05 time 3.55
-    0 SNES Function norm 1.230103176510e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 1.370747809972e-12
+    0 SNES Function norm 1.270225273501e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 9
+    1 SNES Function norm 6.127801080996e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 73 TS dt 0.05 time 3.6
-    0 SNES Function norm 1.203192490830e-06
+    0 SNES Function norm 1.223306878360e-09
       Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 9.939718011209e-13
+    1 SNES Function norm 1.102491133627e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 74 TS dt 0.05 time 3.65
-    0 SNES Function norm 1.177361873373e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 1.247631203881e-12
+    0 SNES Function norm 1.177895282654e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 3
+    1 SNES Function norm 5.628405452733e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 75 TS dt 0.05 time 3.7
-    0 SNES Function norm 1.152566402762e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 8.072579402592e-13
+    0 SNES Function norm 1.133778944764e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 3
+    1 SNES Function norm 6.755377308096e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 76 TS dt 0.05 time 3.75
-    0 SNES Function norm 1.128763626507e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 2
-    1 SNES Function norm 5.556818666641e-13
+    0 SNES Function norm 1.092729211957e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 3
+    1 SNES Function norm 4.612495862759e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 77 TS dt 0.05 time 3.8
-    0 SNES Function norm 1.105912510582e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 1.131226635291e-12
+    0 SNES Function norm 1.052391931444e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 9
+    1 SNES Function norm 6.387208879462e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 78 TS dt 0.05 time 3.85
-    0 SNES Function norm 1.083973190287e-06
+    0 SNES Function norm 1.013907742808e-09
       Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 8.662192276664e-13
+    1 SNES Function norm 8.590017778474e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 79 TS dt 0.05 time 3.9
-    0 SNES Function norm 1.062908030960e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 9
-    1 SNES Function norm 7.396125452787e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+    0 SNES Function norm 9.765734530152e-10
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 0
 80 TS dt 0.05 time 3.95
-    0 SNES Function norm 1.042680062870e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 6.745001924628e-13
+    0 SNES Function norm 3.862108210032e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 5.539883779798e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 81 TS dt 0.05 time 4.
-    0 SNES Function norm 1.023254286376e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 8
-    1 SNES Function norm 6.847548230595e-13
+    0 SNES Function norm 2.002968355523e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 1.434835777476e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 82 TS dt 0.05 time 4.05
-    0 SNES Function norm 1.004596659814e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 9.220930149600e-13
+    0 SNES Function norm 1.841613423939e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 7
+    1 SNES Function norm 1.008691593611e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 83 TS dt 0.05 time 4.1
-    0 SNES Function norm 9.866745024592e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 4.463312294947e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+    0 SNES Function norm 8.432924290185e-10
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 0
 84 TS dt 0.05 time 4.15
-    0 SNES Function norm 9.694566232000e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 6.214802066808e-13
+    0 SNES Function norm 3.334710420813e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 1.148918385430e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 85 TS dt 0.05 time 4.2
-    0 SNES Function norm 9.529129312265e-07
+    0 SNES Function norm 1.727964572959e-09
       Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 1.191759304230e-12
+    1 SNES Function norm 9.529824191688e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 86 TS dt 0.05 time 4.25
-    0 SNES Function norm 9.370141807277e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 9
-    1 SNES Function norm 5.700768858045e-13
+    0 SNES Function norm 1.590482691652e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 3
+    1 SNES Function norm 4.608481262475e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 87 TS dt 0.05 time 4.3
-    0 SNES Function norm 9.217328936795e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 7.016266286120e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+    0 SNES Function norm 7.310180597736e-10
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 0
 88 TS dt 0.05 time 4.35
-    0 SNES Function norm 9.070418699314e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 9.977879322174e-13
+    0 SNES Function norm 2.889361343172e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 8
+    1 SNES Function norm 9.265665219611e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 89 TS dt 0.05 time 4.4
-    0 SNES Function norm 8.929155569021e-07
+    0 SNES Function norm 1.496244518510e-09
       Linear solve converged due to CONVERGED_ATOL iterations 2
-    1 SNES Function norm 7.171818453312e-13
+    1 SNES Function norm 5.002025931336e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 90 TS dt 0.05 time 4.45
-    0 SNES Function norm 8.793294221265e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 6.728957334497e-13
+    0 SNES Function norm 1.378505482114e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 3
+    1 SNES Function norm 1.123325031883e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 91 TS dt 0.05 time 4.5
-    0 SNES Function norm 8.662594841111e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 3
-    1 SNES Function norm 5.111831819706e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+    0 SNES Function norm 6.343706141743e-10
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 0
 92 TS dt 0.05 time 4.55
-    0 SNES Function norm 8.536831367928e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 5.467306966585e-13
+    0 SNES Function norm 2.507363712353e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 5.183510381152e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 93 TS dt 0.05 time 4.6
-    0 SNES Function norm 8.415784677946e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 1.211975575777e-12
+    0 SNES Function norm 1.296900065118e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 5
+    1 SNES Function norm 6.481016135091e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 94 TS dt 0.05 time 4.65
-    0 SNES Function norm 8.299243366997e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 8
-    1 SNES Function norm 5.961308151906e-13
+    0 SNES Function norm 1.197143598159e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 6
+    1 SNES Function norm 9.788959761023e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 95 TS dt 0.05 time 4.7
-    0 SNES Function norm 8.187007450742e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 9.478718441102e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+    0 SNES Function norm 5.514994852245e-10
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 0
 96 TS dt 0.05 time 4.75
-    0 SNES Function norm 8.078883905213e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 8.200274945288e-13
+    0 SNES Function norm 2.180983481444e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 13
+    1 SNES Function norm 7.023212616383e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 97 TS dt 0.05 time 4.8
-    0 SNES Function norm 7.974687108538e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 4
-    1 SNES Function norm 8.579280266831e-13
+    0 SNES Function norm 1.125705404431e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 3
+    1 SNES Function norm 4.478445865121e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 98 TS dt 0.05 time 4.85
-    0 SNES Function norm 7.874240711207e-07
+    0 SNES Function norm 1.041887823716e-09
       Linear solve converged due to CONVERGED_ATOL iterations 5
-    1 SNES Function norm 1.005920411181e-12
+    1 SNES Function norm 7.443086071817e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 99 TS dt 0.05 time 4.9
-    0 SNES Function norm 7.777374543714e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 6
-    1 SNES Function norm 4.988772400943e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+    0 SNES Function norm 4.816340697050e-10
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 0
 100 TS dt 0.05 time 4.95
-    0 SNES Function norm 7.683926012583e-07
-      Linear solve converged due to CONVERGED_ATOL iterations 24
-    1 SNES Function norm 1.105274760893e-12
+    0 SNES Function norm 1.904053030968e-09
+      Linear solve converged due to CONVERGED_ATOL iterations 14
+    1 SNES Function norm 8.747949481002e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 101 TS dt 0.05 time 5.
  >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:199:finalize

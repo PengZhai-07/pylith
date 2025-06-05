@@ -62,18 +62,33 @@ def main():
 
     # command list to run
     commands = [
+
         # pylith step01a_slip_ts.cfg --mesh_generator.refiner.levels=1 --petsc.ts_type=beuler --petsc.ts_adapt_type=none --petsc.log_view=ascii:./perf/0.txt > ./command_logs/command_log_0.txt
+        ## none (odd) adaptive (even)
         "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=beuler --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/1.txt",     # reference model
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=cn --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/2.txt",
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=beuler --petsc.ts_adapt_type=basic --petsc.log_view=ascii:./" + log_view_dir + "/3.txt",  
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=cn --petsc.ts_adapt_type=basic --petsc.log_view=ascii:./" + log_view_dir + "/4.txt",  
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic  --petsc.ts_bdf_order=1 --petsc.log_view=ascii:./" + log_view_dir + "/5.txt", 
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic --petsc.ts_bdf_order=2 --petsc.log_view=ascii:./" + log_view_dir + "/6.txt", 
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic --petsc.ts_bdf_order=3 --petsc.log_view=ascii:./" + log_view_dir + "/7.txt", 
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic --petsc.ts_bdf_order=4 --petsc.log_view=ascii:./" + log_view_dir + "/8.txt", 
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic --petsc.ts_bdf_order=5 --petsc.log_view=ascii:./" + log_view_dir + "/9.txt",
-        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic --petsc.ts_bdf_order=6 --petsc.log_view=ascii:./" + log_view_dir + "/10.txt",
-        # "pylith step01a_slip_ts.cfg --petsc.ts_type=irk --petsc.ts_adapt_type=basic --petsc.log_view=ascii:./perf/11.txt",
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=beuler --petsc.ts_adapt_type=basic --petsc.log_view=ascii:./" + log_view_dir + "/2.txt",
+
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=cn --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/3.txt",
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=cn --petsc.ts_adapt_type=basic --petsc.log_view=ascii:./" + log_view_dir + "/4.txt",
+
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/5.txt", 
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic  --petsc.ts_bdf_order=1 --petsc.log_view=ascii:./" + log_view_dir + "/6.txt", 
+
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/7.txt", 
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic  --petsc.ts_bdf_order=2 --petsc.log_view=ascii:./" + log_view_dir + "/8.txt", 
+
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/9.txt", 
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic  --petsc.ts_bdf_order=3 --petsc.log_view=ascii:./" + log_view_dir + "/10.txt", 
+
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/11.txt", 
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic  --petsc.ts_bdf_order=4 --petsc.log_view=ascii:./" + log_view_dir + "/12.txt", 
+
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/13.txt", 
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic  --petsc.ts_bdf_order=5 --petsc.log_view=ascii:./" + log_view_dir + "/14.txt", 
+
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=none --petsc.log_view=ascii:./" + log_view_dir + "/15.txt", 
+        "pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=bdf --petsc.ts_adapt_type=basic  --petsc.ts_bdf_order=6 --petsc.log_view=ascii:./" + log_view_dir + "/16.txt", 
+
     ]
 
     N = len(commands)
@@ -108,7 +123,7 @@ def main():
         # print(i)       
             
         filename = "output/step01a_slip_ts-domain.h5"
-        
+
         with h5py.File(filename, "r") as f:
             # Print all root level object names (aka keys) 
             # these can be group or dataset names 
