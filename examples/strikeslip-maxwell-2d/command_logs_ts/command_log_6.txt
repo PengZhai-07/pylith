@@ -1,36 +1,106 @@
 Executing: pylith step01a_slip_ts.cfg --timedependent.initial_dt=31.622776601683793*year --timedependent.start_time=-31.622776601683793*year --petsc.log_view=ascii:./perf_ts/6.txt
-An error occurred while executing: pylith step01a_slip_ts.cfg --timedependent.initial_dt=31.622776601683793*year --timedependent.start_time=-31.622776601683793*year --petsc.log_view=ascii:./perf_ts/6.txt
-Return Code: 1
 Output:
- >> {validator}::
- -- pyre.inventory(error)
- -- Filename for ASCII mesh not specified.
- >> {validator}::
- -- pyre.inventory(error)
- -- ASCII input mesh '' not found.
- >> step01a_slip_ts.cfg:67:
- -- pyre.inventory(error)
- -- pylithapp.timedependent.emptybin.fault.eq_ruptures.rupture.db_auxiliary_field <- 'spatialdata.spatialdb.UniformDB'
- -- unknown component 'pylithapp.timedependent.emptybin.fault.eq_ruptures.rupture'
- >> step01a_slip_ts.cfg:68:
- -- pyre.inventory(error)
- -- pylithapp.timedependent.emptybin.fault.eq_ruptures.rupture.db_auxiliary_field.description <- 'Fault rupture auxiliary field spatial database'
- -- unknown component 'pylithapp.timedependent.emptybin.fault.eq_ruptures.rupture.db_auxiliary_field'
- >> step01a_slip_ts.cfg:69:
- -- pyre.inventory(error)
- -- pylithapp.timedependent.emptybin.fault.eq_ruptures.rupture.db_auxiliary_field.values <- '[initiation_time, final_slip_left_lateral, final_slip_opening]'
- -- unknown component 'pylithapp.timedependent.emptybin.fault.eq_ruptures.rupture.db_auxiliary_field'
- >> step01a_slip_ts.cfg:70:
- -- pyre.inventory(error)
- -- pylithapp.timedependent.emptybin.fault.eq_ruptures.rupture.db_auxiliary_field.data <- '[0.0*year, -2.0*m, 0.0*m]'
- -- unknown component 'pylithapp.timedependent.emptybin.fault.eq_ruptures.rupture.db_auxiliary_field'
-usage: pylith [--<property>=<value>] [--<facility>.<property>=<value>] [FILE.cfg] ...
-component 'pylithapp'
-    properties: dump_parameters, help, help-components, help-persistence, help-properties, include-citations, initialize_only, job, launcher, mesh_generator, metadata, nodes, petsc, problem, scheduler, start_python_debugger, typos, weaver
-    facilities: dump_parameters,job,launcher,mesh_generator,metadata,petsc,problem,scheduler,weaver
-For more information:
-  --help-properties: prints details about user settable properties
-  --help-components: prints details about user settable facilities and components
-Error Message:
-pylithapp: configuration error(s)
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/apps/PyLithApp.py:77:main
+ -- pylithapp(info)
+ -- Running on 1 process(es).
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/meshio/MeshIOObj.py:41:read
+ -- meshiopetsc(info)
+ -- Reading finite-element mesh
+ >> /opt/pylith/src/pylith/libsrc/pylith/meshio/MeshIO.cc:75:void pylith::meshio::MeshIO::read(pylith::topology::Mesh*, bool)
+ -- meshiopetsc(info)
+ -- Component 'meshiopetsc.reader': Domain bounding box:
+    (-50000, 50000)
+    (-75000, 75000)
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/faults/FaultCohesiveKin.py:87:preinitialize
+ -- faultcohesivekin(info)
+ -- Pre-initializing fault 'fault'.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:116:preinitialize
+ -- timedependent(info)
+ -- Performing minimal initialization before verifying configuration.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Solution.py:39:preinitialize
+ -- solution(info)
+ -- Performing minimal initialization of solution.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/bc/DirichletTimeDependent.py:86:preinitialize
+ -- dirichlettimedependent(info)
+ -- Performing minimal initialization of time-dependent Dirichlet boundary condition 'bc_xneg'.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/bc/DirichletTimeDependent.py:86:preinitialize
+ -- dirichlettimedependent(info)
+ -- Performing minimal initialization of time-dependent Dirichlet boundary condition 'bc_xpos'.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/faults/FaultCohesiveKin.py:87:preinitialize
+ -- faultcohesivekin(info)
+ -- Pre-initializing fault 'fault'.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:174:verifyConfiguration
+ -- timedependent(info)
+ -- Verifying compatibility of problem configuration.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:219:_printInfo
+ -- timedependent(info)
+ -- Scales for nondimensionalization:
+    Length scale: 1000*m
+    Time scale: 6.31152e+08*s
+    Pressure scale: 3e+10*m**-1*kg*s**-2
+    Density scale: 1.19506e+22*m**-3*kg
+    Temperature scale: 1*K
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:185:initialize
+ -- timedependent(info)
+ -- Initializing timedependent problem with quasistatic formulation.
+ >> /opt/pylith/src/pylith/libsrc/pylith/utils/PetscOptions.cc:250:static void pylith::utils::_PetscOptions::write(pythia::journal::info_t&, const char*, const pylith::utils::PetscOptions&)
+ -- petscoptions(info)
+ -- Setting PETSc options:
+ksp_atol = 1.0e-12
+ksp_converged_reason = true
+ksp_error_if_not_converged = true
+ksp_guess_pod_size = 8
+ksp_guess_type = pod
+ksp_rtol = 1.0e-12
+viewer_hdf5_collective = true
+
+ >> /opt/pylith/src/pylith/libsrc/pylith/utils/PetscOptions.cc:250:static void pylith::utils::_PetscOptions::write(pythia::journal::info_t&, const char*, const pylith::utils::PetscOptions&)
+ -- petscoptions(info)
+ -- Using user values rather then the following default PETSc options:
+dm_reorder_section = true
+dm_reorder_section_type = cohesive
+mg_fine_pc_type = vpbjacobi
+pc_type = gamg
+snes_atol = 1.0e-9
+snes_converged_reason = true
+snes_error_if_not_converged = true
+snes_monitor = true
+snes_rtol = 1.0e-12
+ts_error_if_step_fails = true
+ts_monitor = true
+ts_type = beuler
+
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/TimeDependent.py:132:run
+ -- timedependent(info)
+ -- Solving problem.
+0 TS dt 1.58114 time -1.58114
+    0 SNES Function norm 2.563249414369e-02
+      Linear solve converged due to CONVERGED_ATOL iterations 53
+    1 SNES Function norm 5.904396400385e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+1 TS dt 1.58114 time 0.
+    0 SNES Function norm 1.258933596320e-04
+      Linear solve converged due to CONVERGED_ATOL iterations 52
+    1 SNES Function norm 6.188577530916e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+2 TS dt 1.58114 time 1.58114
+    0 SNES Function norm 4.090026128760e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 41
+    1 SNES Function norm 4.910230317957e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+3 TS dt 0.918861 time 3.16228
+    0 SNES Function norm 1.285484910581e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 32
+    1 SNES Function norm 6.524143593779e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+4 TS dt 0.918861 time 4.08114
+    0 SNES Function norm 1.132098493878e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 29
+    1 SNES Function norm 8.958079139499e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+5 TS dt 0.918861 time 5.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:199:finalize
+ -- timedependent(info)
+ -- Finalizing problem.
+Error (if any):
 ----------------------------------------

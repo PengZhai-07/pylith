@@ -1,4 +1,4 @@
-Executing: pylith step01a_slip_ts.cfg --timedependent.initial_dt=3.1622776601683795*year --timedependent.start_time=-3.1622776601683795*year --petsc.log_view=ascii:./perf_ts/4.txt
+Executing: pylith step01a_slip_ts.cfg --timedependent.initial_dt=3.1622776601683795*year --timedependent.start_time=-3.1622776601683795*year --petsc.log_view=ascii:./perf_ts_comparison/3.txt
 Output:
  >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/apps/PyLithApp.py:77:main
  -- pylithapp(info)

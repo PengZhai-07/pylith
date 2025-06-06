@@ -1,4 +1,4 @@
-Executing: pylith step01a_slip_ts.cfg --timedependent.initial_dt=10.0*year --timedependent.start_time=-10.0*year --petsc.log_view=ascii:./perf_ts/5.txt
+Executing: pylith step01a_slip_ts.cfg --nodes=1 --petsc.ts_type=beuler --petsc.ts_adapt_type=basic --petsc.log_view=ascii:./perf_ts_comparison/1.txt
 Output:
  >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/apps/PyLithApp.py:77:main
  -- pylithapp(info)
@@ -73,62 +73,50 @@ ts_type = beuler
  >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/TimeDependent.py:132:run
  -- timedependent(info)
  -- Solving problem.
-0 TS dt 0.5 time -0.5
+0 TS dt 0.05 time -0.05
     0 SNES Function norm 2.563249414369e-02
+      Linear solve converged due to CONVERGED_ATOL iterations 46
+    1 SNES Function norm 6.419225417299e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+1 TS dt 0.05 time 0.
+    0 SNES Function norm 1.312375682770e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 40
+    1 SNES Function norm 8.758761436657e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+    0 SNES Function norm 7.827142946753e-06
+      Linear solve converged due to CONVERGED_ATOL iterations 29
+    1 SNES Function norm 1.016186013809e-12
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+    0 SNES Function norm 3.587130035180e-06
+      Linear solve converged due to CONVERGED_ATOL iterations 28
+    1 SNES Function norm 8.717103172017e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+2 TS dt 0.0234318 time 0.013146
+    0 SNES Function norm 8.824345861000e-06
+      Linear solve converged due to CONVERGED_ATOL iterations 30
+    1 SNES Function norm 6.816913093443e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+3 TS dt 0.234318 time 0.0365778
+    0 SNES Function norm 9.399779441270e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 36
+    1 SNES Function norm 4.007309590326e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+4 TS dt 2.2254 time 0.270896
+    0 SNES Function norm 1.898167988597e-04
       Linear solve converged due to CONVERGED_ATOL iterations 47
-    1 SNES Function norm 7.090271120224e-13
+    1 SNES Function norm 5.491409453459e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-1 TS dt 0.5 time 0.
-    0 SNES Function norm 8.965295119253e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 45
-    1 SNES Function norm 8.803541950226e-13
+5 TS dt 1.25185 time 2.4963
+    0 SNES Function norm 2.146586370840e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 36
+    1 SNES Function norm 6.124266472713e-13
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-2 TS dt 0.5 time 0.5
-    0 SNES Function norm 6.057392708809e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 35
-    1 SNES Function norm 7.060356640547e-13
+6 TS dt 1.25185 time 3.74815
+    0 SNES Function norm 1.459103206912e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 29
+    1 SNES Function norm 1.061355267101e-12
     Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-3 TS dt 0.5 time 1.
-    0 SNES Function norm 4.154888605578e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 26
-    1 SNES Function norm 9.600089276003e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-4 TS dt 0.5 time 1.5
-    0 SNES Function norm 2.902396383146e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 21
-    1 SNES Function norm 9.769213524303e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-5 TS dt 0.5 time 2.
-    0 SNES Function norm 2.073032415148e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 17
-    1 SNES Function norm 5.859254121937e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-6 TS dt 0.5 time 2.5
-    0 SNES Function norm 1.521313976356e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 12
-    1 SNES Function norm 8.495207900844e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-7 TS dt 0.5 time 3.
-    0 SNES Function norm 1.153259442754e-05
-      Linear solve converged due to CONVERGED_ATOL iterations 13
-    1 SNES Function norm 8.485649822024e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-8 TS dt 0.5 time 3.5
-    0 SNES Function norm 9.073975643713e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 14
-    1 SNES Function norm 8.626589096362e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-9 TS dt 0.5 time 4.
-    0 SNES Function norm 7.428269044739e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 11
-    1 SNES Function norm 6.212184992354e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-10 TS dt 0.5 time 4.5
-    0 SNES Function norm 6.319051512558e-06
-      Linear solve converged due to CONVERGED_ATOL iterations 11
-    1 SNES Function norm 5.513529898893e-13
-    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
-11 TS dt 0.5 time 5.
+7 TS dt 12.5185 time 5.
  >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:199:finalize
  -- timedependent(info)
  -- Finalizing problem.

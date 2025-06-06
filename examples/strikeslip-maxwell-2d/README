@@ -32,6 +32,12 @@ run all methods and compute the error of final-step solution on-the-fly (data in
 Before running the ts.py, the reference solution (displacement) should be in the folder ./output_baseline readily.
 available methods: beuler_none, cn_none, beuler_basic, cn_basic, bdf_1, bdf_2, bdf_3, bdf_4, bdf_5, bdf_6
 
+##### beuler_adapt_vs_fixed_timestep.py  output folder: perf_ts_comparison (log_view)  command_logs_ts_comparison (screen output)
+compare the adaptive beuler method and non-adaptive beuler with constant timestep: [0.1yr,10yr].
+
+Before running the beuler_adapt_vs_fixed_timestep.py, the reference solution (displacement) should be in the folder ./output_baseline readily.
+
+
 ##  notes
 reference model: mesh_generator.refiner.levels = 3 and problem.solution_observers.domain.refine_levels = 1
 other models: mesh_generator.refiner.levels = 2 and problem.solution_observers.domain.refine_levels = 2
@@ -49,3 +55,5 @@ pylith step01a_slip_ts.cfg
 python3 time_convergence_test.py 
 
 python3 ts.py 
+
+pythomn3 beuler_adapt_vs_fixed_timestep.py
