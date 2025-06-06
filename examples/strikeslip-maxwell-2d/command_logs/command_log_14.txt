@@ -202,5 +202,14 @@ ts_type = beuler
  >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:199:finalize
  -- timedependent(info)
  -- Finalizing problem.
+ >> <unknown>:<unknown>:<unknown>
+ -- datawriter(error)
+ -- Could not generate Xdmf file for HDF5 file 'output/step01a_slip_ts-domain.h5'.
+ >> <unknown>:<unknown>:<unknown>
+ -- datawriter(error)
+ -- Could not generate Xdmf file for HDF5 file 'output/step01a_slip_ts-top_boundary.h5'.
+ >> <unknown>:<unknown>:<unknown>
+ -- datawriter(error)
+ -- Could not generate Xdmf file for HDF5 file 'output/step01a_slip_ts-bot_boundary.h5'.
 Error (if any):
 ----------------------------------------

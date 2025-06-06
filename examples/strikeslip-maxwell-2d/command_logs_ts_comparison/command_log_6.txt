@@ -1,0 +1,136 @@
+Executing: pylith step01a_slip_ts.cfg --timedependent.initial_dt=10.0*year --timedependent.start_time=-10.0*year --petsc.log_view=ascii:./perf_ts_comparison/6.txt
+Output:
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/apps/PyLithApp.py:77:main
+ -- pylithapp(info)
+ -- Running on 1 process(es).
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/meshio/MeshIOObj.py:41:read
+ -- meshiopetsc(info)
+ -- Reading finite-element mesh
+ >> /opt/pylith/src/pylith/libsrc/pylith/meshio/MeshIO.cc:75:void pylith::meshio::MeshIO::read(pylith::topology::Mesh*, bool)
+ -- meshiopetsc(info)
+ -- Component 'meshiopetsc.reader': Domain bounding box:
+    (-50000, 50000)
+    (-75000, 75000)
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/faults/FaultCohesiveKin.py:87:preinitialize
+ -- faultcohesivekin(info)
+ -- Pre-initializing fault 'fault'.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:116:preinitialize
+ -- timedependent(info)
+ -- Performing minimal initialization before verifying configuration.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Solution.py:39:preinitialize
+ -- solution(info)
+ -- Performing minimal initialization of solution.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/bc/DirichletTimeDependent.py:86:preinitialize
+ -- dirichlettimedependent(info)
+ -- Performing minimal initialization of time-dependent Dirichlet boundary condition 'bc_xneg'.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/bc/DirichletTimeDependent.py:86:preinitialize
+ -- dirichlettimedependent(info)
+ -- Performing minimal initialization of time-dependent Dirichlet boundary condition 'bc_xpos'.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/faults/FaultCohesiveKin.py:87:preinitialize
+ -- faultcohesivekin(info)
+ -- Pre-initializing fault 'fault'.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:174:verifyConfiguration
+ -- timedependent(info)
+ -- Verifying compatibility of problem configuration.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:219:_printInfo
+ -- timedependent(info)
+ -- Scales for nondimensionalization:
+    Length scale: 1000*m
+    Time scale: 6.31152e+08*s
+    Pressure scale: 3e+10*m**-1*kg*s**-2
+    Density scale: 1.19506e+22*m**-3*kg
+    Temperature scale: 1*K
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:185:initialize
+ -- timedependent(info)
+ -- Initializing timedependent problem with quasistatic formulation.
+ >> /opt/pylith/src/pylith/libsrc/pylith/utils/PetscOptions.cc:250:static void pylith::utils::_PetscOptions::write(pythia::journal::info_t&, const char*, const pylith::utils::PetscOptions&)
+ -- petscoptions(info)
+ -- Setting PETSc options:
+ksp_atol = 1.0e-12
+ksp_converged_reason = true
+ksp_error_if_not_converged = true
+ksp_guess_pod_size = 8
+ksp_guess_type = pod
+ksp_rtol = 1.0e-12
+viewer_hdf5_collective = true
+
+ >> /opt/pylith/src/pylith/libsrc/pylith/utils/PetscOptions.cc:250:static void pylith::utils::_PetscOptions::write(pythia::journal::info_t&, const char*, const pylith::utils::PetscOptions&)
+ -- petscoptions(info)
+ -- Using user values rather then the following default PETSc options:
+dm_reorder_section = true
+dm_reorder_section_type = cohesive
+mg_fine_pc_type = vpbjacobi
+pc_type = gamg
+snes_atol = 1.0e-9
+snes_converged_reason = true
+snes_error_if_not_converged = true
+snes_monitor = true
+snes_rtol = 1.0e-12
+ts_error_if_step_fails = true
+ts_monitor = true
+ts_type = beuler
+
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/TimeDependent.py:132:run
+ -- timedependent(info)
+ -- Solving problem.
+0 TS dt 0.5 time -0.5
+    0 SNES Function norm 2.563249414369e-02
+      Linear solve converged due to CONVERGED_ATOL iterations 47
+    1 SNES Function norm 7.090271120224e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+1 TS dt 0.5 time 0.
+    0 SNES Function norm 8.965295119253e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 45
+    1 SNES Function norm 8.803541950226e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+2 TS dt 0.5 time 0.5
+    0 SNES Function norm 6.057392708809e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 35
+    1 SNES Function norm 7.060356640547e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+3 TS dt 0.5 time 1.
+    0 SNES Function norm 4.154888605578e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 26
+    1 SNES Function norm 9.600089276003e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+4 TS dt 0.5 time 1.5
+    0 SNES Function norm 2.902396383146e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 21
+    1 SNES Function norm 9.769213524303e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+5 TS dt 0.5 time 2.
+    0 SNES Function norm 2.073032415148e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 17
+    1 SNES Function norm 5.859254121937e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+6 TS dt 0.5 time 2.5
+    0 SNES Function norm 1.521313976356e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 12
+    1 SNES Function norm 8.495207900844e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+7 TS dt 0.5 time 3.
+    0 SNES Function norm 1.153259442754e-05
+      Linear solve converged due to CONVERGED_ATOL iterations 13
+    1 SNES Function norm 8.485649822024e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+8 TS dt 0.5 time 3.5
+    0 SNES Function norm 9.073975643713e-06
+      Linear solve converged due to CONVERGED_ATOL iterations 14
+    1 SNES Function norm 8.626589096362e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+9 TS dt 0.5 time 4.
+    0 SNES Function norm 7.428269044739e-06
+      Linear solve converged due to CONVERGED_ATOL iterations 11
+    1 SNES Function norm 6.212184992354e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+10 TS dt 0.5 time 4.5
+    0 SNES Function norm 6.319051512558e-06
+      Linear solve converged due to CONVERGED_ATOL iterations 11
+    1 SNES Function norm 5.513529898893e-13
+    Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+11 TS dt 0.5 time 5.
+ >> /opt/pylith/dest-debug/lib/python3.12/site-packages/pylith/problems/Problem.py:199:finalize
+ -- timedependent(info)
+ -- Finalizing problem.
+Error (if any):
+----------------------------------------

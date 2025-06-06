@@ -1,0 +1,1 @@
+Executing: pylith step01a_slip_ts.cfg --timedependent.initial_dt=0.1*year --timedependent.start_time=-0.1*year --petsc.log_view=ascii:./perf_ts_comparison/2.txt

@@ -109,7 +109,9 @@ def main():
     distance = np.zeros(N)
 
     # load the baseline model for error comparison
-    filename = "output_baseline/refmodel_refine3_order2_beuler_dt1year-domain.h5"
+    # filename_baseline = "output_baseline/refmodel_refine3_order2_beuler_dt1year-domain.h5"
+    filename = "output_baseline/step15_refmodel_refine3_order2_beuler_tsadapt_safety0.2-domain.h5"
+
     with h5py.File(filename, "r") as f:
         # Print all root level object names (aka keys) 
         # these can be group or dataset names 
